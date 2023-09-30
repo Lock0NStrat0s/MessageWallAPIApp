@@ -18,20 +18,22 @@ namespace MessageWallAPI.Controllers
 
         // GET: api/<MessageWallController>?message=Test&id=4
         [HttpGet]
-        public IEnumerable<string> Get(string message = "")
+        public string Get(string firstName = "", string lastName = "")
         {
-            List<string> output = new List<string>
-            {
-                "Hello World",
-                "How are you?"
-            };
+            //List<string> output = new List<string>
+            //{
+            //    "Hello World",
+            //    "How are you?"
+            //};
 
-            if (!string.IsNullOrWhiteSpace(message))
-            {
-                output.Add(message);
-            }
+            //if (!string.IsNullOrWhiteSpace(message))
+            //{
+            //    output.Add(message);
+            //}
 
-            return output;
+            //return output;
+
+            return $"Hi {firstName} {lastName}";
         }
 
         // GET api/<MessageWallController>/5
